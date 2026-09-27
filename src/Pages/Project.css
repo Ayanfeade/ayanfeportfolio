@@ -1,0 +1,179 @@
+.projects {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.projects-heading {
+  max-width: 650px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.projects-heading p {
+  color: #0a66c2;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.projects-heading h2 {
+  color: #1e293b;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.projects-heading span {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Project Grid */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Project Image */
+
+.project-image {
+  height: 200px;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image span img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  color: #1e293b;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.project-content > p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Technologies */
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.technologies span {
+  padding: 6px 10px;
+
+  background: #eff6ff;
+  color: #0a66c2;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Buttons */
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-buttons a {
+  flex: 1;
+
+  padding: 10px;
+
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.project-buttons a:first-child {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.project-buttons a:first-child:hover {
+  background: #084f96;
+}
+
+.project-buttons a:last-child {
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+}
+
+.project-buttons a:last-child:hover {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 70px 5%;
+  }
+
+  .projects-heading h2 {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
