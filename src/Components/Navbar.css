@@ -5,60 +5,252 @@
   --accent: #e8e8e8;
 }
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-  background-color: var(--dark);
-  color: var(--secondary);
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 75px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+
+  padding: 0 30px;
+
+  background-color: var(--dark);
+  color: var(--secondary);
+
   border-bottom: 2px solid var(--accent);
+
+  position: relative;
+  z-index: 1000;
+
+  box-sizing: border-box;
 }
-.navbar h1{
-  color: var(--secondary);
-}
-.navbar a {
+
+/* =========================
+   LOGO / BRAND
+========================= */
+
+.navbar-brand {
   text-decoration: none;
-}
-.navbar img {
-  font-size: 2rem;
   color: var(--secondary);
-  display: flex;
-  margin-left: 12px;
-  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+
+  color: var(--secondary);
+
   font-family: Georgia, "Times New Roman", Times, serif;
+
+  font-size: 2rem;
+  font-weight: 700;
 }
-nav ul {
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
 }
-nav ul li {
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  gap: 10px;
+}
+
+.navbar li {
   list-style: none;
 }
-nav ul li a {
-  text-decoration: none;
+
+.navbar li a {
+  display: block;
+
+  padding: 12px 15px;
+
   color: var(--secondary);
-  margin: 25px;
+
+  text-decoration: none;
+
   font-family: Georgia, "Times New Roman", Times, serif;
+
   font-size: 1.1rem;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
-nav ul li a:hover {
-  cursor: pointer;
+
+.navbar li a:hover {
   color: var(--primary);
-  
 }
-@media (max-width: 768px) {
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 45px;
+  height: 40px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+  color: var(--secondary);
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
   .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.7rem;
+  }
+
+  .navbar li a {
+    padding: 10px 8px;
+    font-size: 1rem;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    min-height: 70px;
+
+    padding: 0 18px;
+
+    flex-direction: row;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.45rem;
+  }
+
+  /* Show hamburger */
+
+  .menu-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile navigation */
+
+  .navbar nav {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
     width: 100%;
+    max-width: 100%;
+
+    background-color: var(--dark);
+
+    display: none;
+
+    padding: 10px 0 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-sizing: border-box;
+  }
+
+  /* When menu is open */
+
+  .navbar nav.active {
+    display: block;
+  }
+
+  .navbar ul {
+    width: 100%;
+
+    display: flex;
     flex-direction: column;
+
+    align-items: center;
+
+    gap: 0;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    width: 100%;
+
     text-align: center;
   }
-  .navbar a {
-    flex-wrap: wrap;
-    padding: 10px;
-    margin: -8px;
+
+  .navbar li a {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    font-size: 1.1rem;
+
+    box-sizing: border-box;
+  }
+
+  .navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.25rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.6rem;
   }
 }

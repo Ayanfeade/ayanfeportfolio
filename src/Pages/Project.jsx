@@ -31,8 +31,8 @@ function Project() {
       description:
         "A personal portfolio website designed to showcase my skills, projects, experience, and contact information.",
       technologies: ["React", "CSS", "JavaScript"],
-      live: "#",
-      github: "#",
+      live: "https://ayanfeportfolio.vercel.app/",
+      github: "https://github.com/Ayanfeade/ayanfeportfolio",
     },
   ];
 

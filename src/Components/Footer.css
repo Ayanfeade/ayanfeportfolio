@@ -4,48 +4,155 @@
   --dark: #1e293b;
   --accent: #e8e8e8;
 }
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
 .footer-session {
-  background: var(--dark);
+  background-color: var(--dark);
   color: var(--secondary);
-  border-top: none;
-  box-shadow: 0px 2px 16px var(--secondary);
   width: 100%;
-  padding: 25px 55px;
+  box-sizing: border-box;
+  padding: 45px 20px 20px;
+  overflow: hidden;
 }
-.footer-session p {
-  text-align: center;
-  padding: 20px 8px;
-}
+
+/* =========================
+   FOOTER CONTENT
+========================= */
+
 .myFooter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 100px;
-  margin-left: 100px;
-}
-.small-footer {
-  color: var(--secondary);
   width: 100%;
-  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  box-sizing: border-box;
 }
+
+/* =========================
+   FOOTER SECTIONS
+========================= */
+
+.small-footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.small-footer h3 {
+  color: var(--secondary);
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+}
+
+.small-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .small-footer ul li {
   list-style: none;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
+
 .small-footer ul li a {
   text-decoration: none;
-  padding: 12px;
-  margin-bottom: 12px;
   color: var(--secondary);
-  margin-bottom: 8px;
+  transition: color 0.3s ease;
+  overflow-wrap: anywhere;
 }
+
+.small-footer ul li a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-session > p {
+  text-align: center;
+  margin: 35px 0 0;
+  padding: 20px 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 768px) {
-  .myFooter {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .footer-session {
+    padding: 35px 20px 20px;
   }
+
+  .myFooter {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+  }
+}
+
+/* =========================
+   ANDROID / MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .footer-session {
+    padding: 30px 16px 15px;
+  }
+
+  .myFooter {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .small-footer {
-    margin-right: 100px;
-    padding-right: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .small-footer h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .small-footer ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .small-footer ul li a {
+    padding: 0;
+  }
+
+  .footer-session > p {
+    margin-top: 25px;
+    padding: 18px 5px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+  .footer-session {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .small-footer ul li {
+    font-size: 0.9rem;
   }
 }

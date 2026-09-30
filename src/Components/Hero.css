@@ -4,138 +4,429 @@
   --dark: #1e293b;
   --accent: #e8e8e8;
 }
+
+/* =========================
+   HERO SESSION
+========================= */
+
 .hero-session {
-  background: linear-gradient(to bottom, var(--accent), var(--secondary));
-  font-family: Georgia, "Times New Roman", Times, serif;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
-  padding: 2px 6px;
-}
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  background: rgba(255, 255, 255, 0.1);
-}
-.hero-text {
-  margin-left: 10px;
-  padding: 25px;
-  text-align: center;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent), transparent);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-  animation: fadeScale 15s ease infinite alternate;
-}
-/* @keyframes fadeScale {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-} */
-.hero-text h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: var(--primary);
-  margin-bottom: 12px;
-}
-.hero-text h2 {
-  color: var(--dark);
-  font-size: 4rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-.hero-text h1 {
-  background: radial-gradient(circle at bottom, var(--primary), var(--dark));
-  color: transparent;
-  background-clip: text;
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-.hero-text p {
-  color: var(--dark);
-  font-size: 1.2rem;
-  font-weight: 600;
+
+  padding: 0;
+
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    var(--secondary)
+  );
+
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 10px;
-  padding: 20px;
+
+  overflow: hidden;
 }
-.hero-btn {
+
+/* =========================
+   SWIPER
+========================= */
+
+.hero-session .swiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero-session .swiper-slide {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 35px;
-  margin-top: 25px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  overflow: hidden;
 }
-.view-btn {
-  color: var(--secondary);
-  background-color: var(--primary);
-  padding: 16px 30px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.hire-btn {
-  color: var(--dark);
-  background-color: var(--secondary);
-  padding: 16px 30px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 2px solid var(--dark);
-}
-.big-hero {
-  box-shadow: 0 2px 2px rgba(255, 255, 255, var(--dark));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding: 45px;
-}
-.big-hero img {
-  width: 300px;
-  height: 320px;
-  margin-right: 60px;
-}
+
+/* =========================
+   HERO BACKGROUND IMAGE
+========================= */
+
 .hero-img {
-  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 100vh;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  padding: 45px 25px;
+
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px;
-  }
-  .hero-text {
-    margin-left: 0px;
-    text-align: center;
-  }
+/* =========================
+   HERO CONTENT
+========================= */
+
+.big-hero {
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   HERO TEXT CARD
+========================= */
+
+.hero-text {
+  width: 100%;
+  max-width: 850px;
+
+  min-width: 0;
+
+  margin: 0 auto;
+  padding: 40px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(232, 232, 232, 0.9),
+    rgba(255, 255, 255, 0.4)
+  );
+
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   HELLO
+========================= */
+
+.hero-text h3 {
+  margin: 0 0 12px;
+
+  color: var(--primary);
+
+  font-family:
+    "Franklin Gothic Medium",
+    "Arial Narrow",
+    Arial,
+    sans-serif;
+
+  font-size: 1.5rem;
+}
+
+/* =========================
+   NAME
+========================= */
+
+.hero-text h1 {
+  margin: 0 0 20px;
+
+  background: radial-gradient(
+    circle at bottom,
+    var(--primary),
+    var(--dark)
+  );
+
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   JOB TITLE
+========================= */
+
+.hero-text h2 {
+  margin: 0 0 20px;
+
+  color: var(--dark);
+
+  font-size: clamp(2.5rem, 7vw, 4rem);
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-text p {
+  max-width: 700px;
+
+  margin: 0 auto 25px;
+  padding: 10px;
+
+  color: var(--dark);
+
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin: 25px 0 0;
+}
+
+.view-btn,
+.hire-btn {
+  min-width: 150px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 14px 25px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.view-btn {
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.hire-btn {
+  color: var(--dark);
+  background-color: var(--secondary);
+
+  border: 2px solid var(--dark);
+}
+
+.view-btn:hover,
+.hire-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SWIPER NAVIGATION
+========================= */
+
+.hero-session .swiper-button-prev,
+.hero-session .swiper-button-next {
+  color: var(--primary);
+}
+
+.hero-session .swiper-button-prev::after,
+.hero-session .swiper-button-next::after {
+  font-size: 25px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
   .hero-img {
-    flex-direction: column;
-    min-height: 800px;
+    padding: 40px 20px;
   }
-  .hero-img img {
-    width: 250px;
-    height: 250px;
-    margin-right: 0px;
+
+  .big-hero {
+    max-width: 750px;
+    padding: 15px;
   }
-  .hero-btn {
-    margin-bottom: 45px;
-    margin-top: 25px;
-    margin-left: 48px;
+
+  .hero-text {
+    padding: 35px 25px;
   }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
   .hero-session {
-    min-height: 800px;
+    min-height: auto;
+  }
+
+  .hero-img {
+    min-height: auto;
+
+    padding: 50px 15px;
+
+    background-position: center;
+  }
+
+  .big-hero {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px 18px;
+
+    border-radius: 18px;
+  }
+
+  .hero-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .hero-text h2 {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    padding: 5px;
+  }
+
+  .hero-btn {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 25px 0 0;
+  }
+
+  .view-btn,
+  .hire-btn {
+    min-width: 135px;
+
+    padding: 13px 18px;
+  }
+
+  .hero-session .swiper-button-prev,
+  .hero-session .swiper-button-next {
+    display: none;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero-img {
+    padding: 35px 10px;
+  }
+
+  .hero-text {
+    padding: 25px 14px;
+  }
+
+  .hero-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 12px;
+  }
+
+  .view-btn,
+  .hire-btn {
+    width: 100%;
+    max-width: 220px;
   }
 }
